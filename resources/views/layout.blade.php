@@ -8,17 +8,32 @@
 </head>
 <body>
 
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/contact">Contact</a></li>
+    <style>
 
-        </ul>
-    </nav>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            color: black;
+            list-style: none;
+        }
+        .active a {
+            color: orangered;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 992px;
+            margin: 0 auto;
+        }
+
+    </style>
 
     <div class="container">
+
+        @include('partials.nav')
+
         @yield('content')
     </div>
 
